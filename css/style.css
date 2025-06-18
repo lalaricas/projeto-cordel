@@ -1,0 +1,106 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+:root {
+    --fonte1: Arial, Helvetica, sans-serif;
+    --fonte2: 'Passion One', cursive;
+    --fonte3: 'Caveat', cursive;
+}
+
+* {
+    margin: 0px;
+    padding: 0px; /* puxa todos os elementos da pagina para o canto esquerdo */
+    font-size: 1em;
+}
+
+html, body {
+    min-height: 100vh; /* alinha os elementos com o tamanho da viewport */
+    background-color: darkgrey;
+    font-family: var(--fonte1);
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    
+}
+
+header > h1 {
+    padding-top: 50px;
+    font-variant: small-caps; /* titulo em capslock mais discreto */
+    font-family: var(--fonte2);
+    font-size: 7vw;
+}
+
+header > p {
+    padding-bottom: 50px;
+}
+
+header a, footer a { /* todos os links do header e footer */
+    color: white; 
+    text-decoration: none;  /* sem mudar a cor ao clicar */ 
+    font-weight: bolder; /* em negrito */
+}
+
+header a:hover, footer a:hover { /* hovers no header e footer */ 
+    text-decoration: underline; /* ao passar o mouse, fica sublinhado */
+}
+
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh; 
+    line-height: 2em;
+    padding-left: 30px; /* cria um espaçamento entre os textos e a linha da section */
+    font-size: 1.5em;
+    
+}
+
+section > p {
+    padding-bottom: 1em;
+}
+
+section > pre {
+    white-space: pre-line; 
+    padding: 5px;
+    font-family: var(--fonte3);
+}
+
+section.normal { 
+    background-color: white;
+    color: black;
+}
+
+section.imagem {
+    background-color: rgba(8, 8, 8, 0.925);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.486);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section.imagem pre { 
+    display: inline-block; /* cria uma caixa que se adapta ao redor do paragrafo */ 
+    background-color: rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 0px black;
+}
+
+section#img01 {
+    background-image: url("../imagens/background001.jpg");
+    background-position: right center;
+}
+
+section#img02 {
+    background-image: url("../imagens/background002.jpg");
+    background-position: right center;
+}   
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
